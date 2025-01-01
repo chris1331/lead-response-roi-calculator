@@ -139,9 +139,9 @@ const LeadCalculator = () => {
       </div>
 
       <div className="space-y-4 pt-4">
-        <p className="text-sm text-muted-foreground font-sans">
-          Based on industry research, faster response times can significantly improve conversion rates.
-        </p>
+        <h3 className="text-lg font-semibold text-calculator-primary font-mono mb-4">
+          Want to reduce your response time?
+        </h3>
         <Button
           className="w-full bg-gradient-to-r from-calculator-primary to-calculator-secondary hover:opacity-90 transition-opacity font-sans"
           onClick={() => {
@@ -152,7 +152,7 @@ const LeadCalculator = () => {
             });
           }}
         >
-          Schedule a Demo to Reduce Response Time
+          Schedule a FREE Consultation Today!
         </Button>
       </div>
     </Card>
