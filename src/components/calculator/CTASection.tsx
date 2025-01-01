@@ -12,9 +12,9 @@ const CTASection = () => {
       <Button
         className="w-full bg-gradient-to-r from-calculator-primary to-calculator-secondary hover:opacity-90 transition-opacity font-sans"
         onClick={() => {
-          window.location.href = "https://retaingenius.com/lead-gen-management-form/";
+          window.open("https://retaingenius.com/lead-gen-management-form/", "_blank", "noopener,noreferrer");
           toast({
-            title: "Redirecting",
+            title: "Opening new tab",
             description: "Taking you to our lead generation management form.",
           });
         }}
