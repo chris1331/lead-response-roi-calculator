@@ -6,10 +6,10 @@ const Index = () => {
       <div className="max-w-4xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-calculator-primary font-mono">
-            Lead Response ROI Calculator
+            Follow Up ROI Calculator
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto font-sans">
-            Discover how much revenue you could be losing due to delayed lead responses
+            Discover how much revenue you could be losing due to delayed lead responses and missed follow-ups
           </p>
         </div>
         <LeadCalculator />
