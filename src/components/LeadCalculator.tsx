@@ -27,11 +27,19 @@ const LeadCalculator = () => {
     
     // Calculate multiplier based on response time
     // For each 0.5 hours, increase by 5%
-    const halfHourIncrements = Math.floor(inputs.responseTime * 2); // multiply by 2 to get half hours
+    const halfHourIncrements = Math.floor(inputs.responseTime * 2);
     const multiplier = 1 + (halfHourIncrements * 0.05);
     
-    const revenue = baseRevenue * multiplier;
-    setLostRevenue(revenue);
+    // Calculate the revenue with the time multiplier
+    const calculatedRevenue = baseRevenue * multiplier;
+    
+    // Calculate the maximum possible revenue (total revenue from all leads)
+    const maxPossibleRevenue = inputs.leadsPerMonth * inputs.customerValue;
+    
+    // Ensure the lost revenue doesn't exceed the maximum possible revenue
+    const finalRevenue = Math.min(calculatedRevenue, maxPossibleRevenue);
+    
+    setLostRevenue(finalRevenue);
   };
 
   const handleInputChange = (field: keyof CalculatorInputs, value: number) => {
