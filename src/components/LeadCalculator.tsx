@@ -27,11 +27,6 @@ const LeadCalculator = () => {
     const conversionLoss = Math.max(0, Math.min(100 - inputs.conversionRate, 100)) / 100;
     const revenue = inputs.leadsPerMonth * inputs.customerValue * conversionLoss;
     setLostRevenue(revenue);
-    
-    toast({
-      title: "Calculation Complete",
-      description: "Your potential lost revenue has been calculated.",
-    });
   };
 
   const handleInputChange = (field: keyof CalculatorInputs, value: number) => {
