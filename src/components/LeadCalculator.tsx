@@ -150,9 +150,10 @@ const LeadCalculator = () => {
         <Button
           className="w-full bg-gradient-to-r from-calculator-primary to-calculator-secondary hover:opacity-90 transition-opacity"
           onClick={() => {
+            window.location.href = "https://retaingenius.com/lead-gen-management-form/";
             toast({
-              title: "Demo Scheduled",
-              description: "Thank you for your interest! Our team will contact you shortly.",
+              title: "Redirecting",
+              description: "Taking you to our lead generation management form.",
             });
           }}
         >

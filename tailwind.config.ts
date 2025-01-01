@@ -53,9 +53,9 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         calculator: {
-          primary: "#2563eb",
-          secondary: "#0ea5e9",
-          accent: "#7dd3fc",
+          primary: "#563ff4",
+          secondary: "#f58f29",
+          accent: "#f58f29",
         },
       },
       borderRadius: {
