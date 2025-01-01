@@ -48,10 +48,10 @@ const LeadCalculator = () => {
   return (
     <Card className="w-full max-w-2xl p-6 space-y-6">
       <div className="space-y-2">
-        <h2 className="text-2xl font-bold text-calculator-primary">
+        <h2 className="text-2xl font-bold text-calculator-primary font-mono">
           Lead Response Time Calculator
         </h2>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground font-sans">
           Calculate potential revenue loss from delayed lead responses
         </p>
       </div>
@@ -135,20 +135,20 @@ const LeadCalculator = () => {
       </div>
 
       <div className="p-4 bg-calculator-accent/10 rounded-lg">
-        <h3 className="text-lg font-semibold text-calculator-primary mb-2">
+        <h3 className="text-lg font-semibold text-calculator-primary font-mono mb-2">
           Estimated Monthly Revenue Loss
         </h3>
-        <div className="text-3xl font-bold text-calculator-secondary animate-number-increment">
+        <div className="text-3xl font-bold text-calculator-secondary font-mono animate-number-increment">
           ${lostRevenue.toLocaleString()}
         </div>
       </div>
 
       <div className="space-y-4 pt-4">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-sm text-muted-foreground font-sans">
           Based on industry research, faster response times can significantly improve conversion rates.
         </p>
         <Button
-          className="w-full bg-gradient-to-r from-calculator-primary to-calculator-secondary hover:opacity-90 transition-opacity"
+          className="w-full bg-gradient-to-r from-calculator-primary to-calculator-secondary hover:opacity-90 transition-opacity font-sans"
           onClick={() => {
             window.location.href = "https://retaingenius.com/lead-gen-management-form/";
             toast({
