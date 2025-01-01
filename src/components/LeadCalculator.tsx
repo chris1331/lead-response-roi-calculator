@@ -23,7 +23,14 @@ const LeadCalculator = () => {
 
   const calculateLostRevenue = () => {
     const conversionLoss = Math.max(0, Math.min(100 - inputs.conversionRate, 100)) / 100;
-    const revenue = inputs.leadsPerMonth * inputs.customerValue * conversionLoss;
+    const baseRevenue = inputs.leadsPerMonth * inputs.customerValue * conversionLoss;
+    
+    // Calculate multiplier based on response time
+    // For each 0.5 hours, increase by 5%
+    const halfHourIncrements = Math.floor(inputs.responseTime * 2); // multiply by 2 to get half hours
+    const multiplier = 1 + (halfHourIncrements * 0.05);
+    
+    const revenue = baseRevenue * multiplier;
     setLostRevenue(revenue);
   };
 
