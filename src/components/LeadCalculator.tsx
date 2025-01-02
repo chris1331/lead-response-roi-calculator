@@ -62,7 +62,7 @@ const LeadCalculator = () => {
           label="Average Response Time (hours)"
           value={inputs.responseTime}
           onChange={(value) => handleInputChange("responseTime", value)}
-          max={24}
+          max={8}
           step={0.5}
         />
 
